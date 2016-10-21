@@ -28,17 +28,17 @@ function activateTool(toolstr) {
 var slist = [
     {
         name: "安陆用地类型图-1990",
-        url: "http://202.114.148.160:6080/arcgis/rest/services/anl_LU90/MapServer",
+        url: "https://202.114.148.160:6443/arcgis/rest/services/anl_LU90/MapServer",
         layerobj: null
     },
     {
         name: "安陆用地类型图-1995",
-        url: "http://202.114.148.160:6080/arcgis/rest/services/anl_LU95/MapServer",
+        url: "https://202.114.148.160:6443/arcgis/rest/services/anl_LU95/MapServer",
         layerobj: null
     },
     {
         name: "安陆用地类型图-2000",
-        url: "http://202.114.148.160:6080/arcgis/rest/services/anl_LU00/MapServer",
+        url: "https://202.114.148.160:6443/arcgis/rest/services/anl_LU00/MapServer",
         layerobj: null
     }
 
