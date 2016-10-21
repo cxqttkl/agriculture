@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>湖北农业数据管理平台</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/our.css" rel="stylesheet">
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Bootstrap Table-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+    <!-- Latest compiled and minified Locales -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
+
+
+    <!-- Esri ags api-->
+    <!--
+    <link rel="stylesheet" href="https://js.arcgis.com/4.1/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.1/"></script>
+-->
+    <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css">
+    <script src="https://js.arcgis.com/3.18/"></script>
+
+
+
+
+
+    <script src="js/our.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-md-4 column">
+                <h3>
+				湖北农业数据管理平台
+			</h3>
+            </div>
+            <div class="col-md-8 column">
+                <div class="row clearfix">
+                    <div class="col-md-4 column">
+
+                        <div class="dropdown">
+                            <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">农业区划数据列表
+                                <span class="caret"></span>
+                            </button>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" onclick='showlayer("安陆用地类型图-1990")'>安陆用地类型图-1990</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" onclick="showlayer('安陆用地类型图-1995')">安陆用地类型图-1995</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" onclick="showlayer('安陆用地类型图-2000')">安陆用地类型图-2000</a>
+                                </li>
+
+
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#">农业数据历史展示</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-4 column">
+                        <div class="btn-group">
+                            <button class="btn btn-default" type="button" onclick="activateTool('extent')"><em class="glyphicon  glyphicon-search"></em> 拉框</button>
+                            <button class="btn btn-default" type="button" onclick="activateTool('point')"><em class="glyphicon  glyphicon-question-sign"></em> 点击</button>
+                            <button class="btn btn-default" type="button"><em class="glyphicon  glyphicon-list-alt"></em> 属性</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 column">
+                        <button id="btnclear" type="button" class="btn btn-default">清空</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <!--            <iframe width="100%" height="600px" frameborder="0" src="https://cxqttkl.carto.com/viz/2f5ee0b2-9093-11e6-acf9-0e98b61680bf/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>-->
+                <div id="esrimap">
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-8 column">
+                <table id="table"></table>
+            </div>
+            <div class="col-md-4 column">
+                <address> <strong>湖北大学资源环境学院</strong><br />湖北省武汉市武昌区友谊大道368号 <br />邮箱：zhxy@hubu.edu.cn<br /> <abbr title="Phone"> </abbr> 电话：027-88665838 </address>
+                 
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
