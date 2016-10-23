@@ -55,19 +55,20 @@
 
 
 
-
+    <div id="esrimap">
+    </div>
     <div class="container-fluid">
         <div class="row clearfix">
             <div class="col-md-4 column">
-                <h3>
-				湖北农业数据管理平台
+                <h3 class="text-right">
+				    湖北农业数据管理平台
 			</h3>
             </div>
             <div class="col-md-8 column">
                 <div class="row clearfix">
-                    <div class="col-md-4 column">
+                    <div class="col-md-6 column">
 
-                        <div class="dropdown">
+                        <div class="dropdown" >
                             <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">农业区划数据列表
                                 <span class="caret"></span>
                             </button>
@@ -81,7 +82,7 @@
                                     <a role="menuitem" tabindex="-1" onclick="showlayer('安陆用地类型图-1995')">安陆用地类型图-1995</a>
                                 </li>
                                 <li role="presentation">
-                                    <a role="menuitem" tabindex="-1"  onclick="showlayer('安陆用地类型图-2000')">安陆用地类型图-2000</a>
+                                    <a role="menuitem" tabindex="-1" onclick="showlayer('安陆用地类型图-2000')">安陆用地类型图-2000</a>
                                 </li>
 
 
@@ -96,44 +97,38 @@
 
                     </div>
 
-                    <div class="col-md-4 column">
-                        <div class="btn-group">
+                    <div class="col-md-6 column" >
+                        <div class="btn-group" >
                             <button class="btn btn-default" type="button" onclick="activateTool('extent')"><em class="glyphicon  glyphicon-search"></em> 拉框</button>
                             <button class="btn btn-default" type="button" onclick="activateTool('point')"><em class="glyphicon  glyphicon-question-sign"></em> 点击</button>
-                            <button class="btn btn-default" type="button"><em class="glyphicon  glyphicon-list-alt"></em> 属性</button>
+                            <button id="btnclear" type="button" class="btn btn-default" onclick="closeTable()">清空</button>
                         </div>
                     </div>
-
-                    <div class="col-md-4 column">
-                        <button id="btnclear" type="button" class="btn btn-default">清空</button>
-                    </div>
-
 
                 </div>
             </div>
         </div>
         <div class="row clearfix">
             <div class="col-md-12 column">
-                <!--            <iframe width="100%" height="600px" frameborder="0" src="https://cxqttkl.carto.com/viz/2f5ee0b2-9093-11e6-acf9-0e98b61680bf/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>-->
-                <div id="esrimap">
-                </div>
+
             </div>
-        </div>
-        <div class="row clearfix">
-            <div class="col-md-8 column">
-                <table id="table"></table>
-            </div>
+            <!--
             <div class="col-md-4 column">
                 <address> <strong>湖北大学资源环境学院</strong><br />湖北省武汉市武昌区友谊大道368号 <br />邮箱：zhxy@hubu.edu.cn<br /> <abbr title="Phone"> </abbr> 电话：027-88665838 </address>
-                 
+
 
 
             </div>
+-->
         </div>
+
+
+
+
     </div>
 
 
-
+    <table id="table" data-row-style=rowStyle data-show-toggle=true data-height=200></table>
 
 </body>
 

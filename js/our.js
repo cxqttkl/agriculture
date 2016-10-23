@@ -22,23 +22,40 @@ function activateTool(toolstr) {
 
 }
 
+function rowStyle(row, index) {
+    var classes = ['active', 'success', 'info', 'warning', 'danger'];
+    if (index % 2 === 0) {
+        return {
+            classes: classes[0]
+        };
+    } else {
+        return {
+            classes: classes[1]
+        };
+    }
+}
+
+function closeTable() {
+    $('#table').bootstrapTable('destroy');
+}
+
 
 
 //需要展示的地图服务, 服务名称id+服务地址url
 var slist = [
     {
         name: "安陆用地类型图-1990",
-        url: "https://202.114.148.160:6443/arcgis/rest/services/anl_LU90/MapServer",
+        url: "http://202.114.148.160:6080/arcgis/rest/services/anl_LU90/MapServer",
         layerobj: null
     },
     {
         name: "安陆用地类型图-1995",
-        url: "https://202.114.148.160:6443/arcgis/rest/services/anl_LU95/MapServer",
+        url: "http://202.114.148.160:6080/arcgis/rest/services/anl_LU95/MapServer",
         layerobj: null
     },
     {
         name: "安陆用地类型图-2000",
-        url: "https://202.114.148.160:6443/arcgis/rest/services/anl_LU00/MapServer",
+        url: "http://202.114.148.160:6080/arcgis/rest/services/anl_LU00/MapServer",
         layerobj: null
     }
 
@@ -118,7 +135,7 @@ require([
 
                         var tableCol = [];
                         var tableData = [];
-                        
+
 
                         // for column of table
                         arrayUtils.forEach(results.fields, function (f) {
@@ -145,7 +162,7 @@ require([
                             data: tableData
                         });
                         $('#table').bootstrapTable('load', tableData);
-                    
+
                     },
                     function (error) {
                         alert("请求失败或出现其他错误，未返回正确结果！" + error.toString())
